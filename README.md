@@ -28,19 +28,22 @@ Chippy is a Full Stack Full CRUD web app utilizing a Restful API, Ruby on rails,
 
 ## MVP
 
-> The Minimum Viable Product should be a well-planned, easily-communicated product, ensuring that the client's deliverable will be achievable and meet specifications within the time frame estimated.
-
-_The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus fermentum risus vitae bibendum. Integer vel ipsum mollis odio sollicitudin ornare eu vel ex. In quis fringilla velit, ac maximus quam. Etiam eget placerat neque. Aenean faucibus sem non nisi lobortis ullamcorper._
+_The **Chippy** MVP is to have a Full CRUD both front-end(React) and back-end(Rails). Have a Restful JSON API with at least 3 database tables with at least one
+association._
 
 <br>
 
 ### Goals
 
-- _Lorem ipsum, dolor sit amet,_
-- _consectetur adipiscing elit._
-- _Phasellus dapibus fermentum risus vitae bibendum._
-- _Integer vel ipsum mollis odio sollicitudin ornare eu vel ex._
-- _etc._
+- _Full CRUD back-end_
+- _Restful JSON API_
+- _At least 3 database tables 1 association_
+- _Full CRUD front-end_
+- _At least 8 components_
+- _Sleek professional styling/design_
+- _Responsive design at least 2 media-queries_
+- _Linting_
+- _Deployment_
 
 <br>
 
