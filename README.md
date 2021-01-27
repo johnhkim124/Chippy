@@ -92,7 +92,7 @@ association._
 
 #### Component Tree
 
-> Use this section to display the structure of how your React components are being rendered. This should show the parent to child relation between you components. In other words, show which components are rendering the other components. 
+
 
 #### Component Hierarchy
 
@@ -114,7 +114,7 @@ src
 
 #### Component Tree
 
-> Use this section to include a link to your component tree.
+![Component Hierarchy](blob:https://whimsical.com/557362a1-16e3-4c4b-a7f6-473672b8a725)
 
 [Component tree](url)
 
