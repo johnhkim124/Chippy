@@ -70,25 +70,25 @@ association._
 
 - Desktop Landing
 
-![Wire Frame](url)
-
-- Desktop Hero
-
-![Dummy Link](url)
+![Wire Frame](https://puu.sh/Hb8A6/dbe581fdaa.png)
 
 - Resource Index
 
-![Dummy Link](url)
+![Wire Frame](https://puu.sh/Hb8KN/096f209a9c.png)
 
 - Resource Show
 
-![Dummy Link](url)
+![Create](https://puu.sh/Hb8Cr/d472e7e386.png)
+
+- Desktop Create
+
+![Wire Frame](https://puu.sh/Hb8MC/2aeeb8c68e.png)
 
 - Tablet Resource Index
 
-![Dummy Link](url)
+![Wire Frame](https://puu.sh/Hb8NA/53f99a66ec.png)
 
-- Mobile Resource Index
+- Tablet Resource Index
 
 #### Component Tree
 
