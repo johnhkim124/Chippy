@@ -66,11 +66,11 @@ association._
 
 
 
-![Wire Frame](https://wireframe.cc/pro/edit/410319)
+![Wire Frame](https://puu.sh/Hb8yT/e9f34a3897.png)
 
 - Desktop Landing
 
-![Dummy Link](url)
+![Wire Frame](url)
 
 - Desktop Hero
 
