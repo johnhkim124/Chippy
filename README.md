@@ -118,7 +118,7 @@ src
 
 ![Component Hierarchy]()
 
-[Component tree](https://puu.sh/Hb9BL/33893702af.png)
+![Component tree](https://puu.sh/Hb9BL/33893702af.png)
 
 #### Time Estimates
 
