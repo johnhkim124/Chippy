@@ -64,9 +64,9 @@ association._
 
 #### Wireframes
 
-> Use the Wireframes section to display desktop, tablet and mobile views. No hand-drawn wireframes. Use a tool like wireframe.cc, Whimsical or AdobeXD
 
-![Dummy Link](url)
+
+![Wire Frame](https://wireframe.cc/pro/edit/410319)
 
 - Desktop Landing
 
