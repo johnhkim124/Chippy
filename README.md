@@ -101,11 +101,13 @@ association._
 ``` structure
 
 src
-|__ assets/
-      |__ fonts
+|__ containers/
+      |__ MainContainer.jsx
       |__ graphics
       |__ images
       |__ mockups
+|__ layouts/
+      |__ 
 |__ components/
       |__ Header.jsx
 |__ services/
@@ -114,9 +116,9 @@ src
 
 #### Component Tree
 
-![Component Hierarchy](blob:https://whimsical.com/557362a1-16e3-4c4b-a7f6-473672b8a725)
+![Component Hierarchy]()
 
-[Component tree](url)
+[Component tree](https://puu.sh/Hb9BL/33893702af.png)
 
 #### Time Estimates
 
