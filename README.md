@@ -53,9 +53,9 @@ association._
 
 |     Library      | Description                                |
 | :--------------: | :----------------------------------------- |
-|      React       | _Lorem ipsum dolor sit amet, consectetur._ |
-|   React Router   | _Lorem ipsum dolor sit amet, consectetur._ |
-|      Rails       | _Lorem ipsum dolor sit amet, consectetur._ |
+|      React       | _Front-end._ |
+|   React Router   | _Routes._ |
+|      Rails       | _Back-end/DB._ |
 
 
 <br>
