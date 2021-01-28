@@ -20,7 +20,7 @@
 
 ## Overview
 
-_**Chippy** is the one stop shop for all your snacking cravings. Browse your favorites from sweet to salty, brands to indie, and much more. 
+_**Chippy** is the one stop shop for all your snack cravings e-commerce web app. Browse your favorites from sweet to salty, brands to indie, and much more. 
 Chippy is a Full Stack Full CRUD web app utilizing a Restful API, Ruby on rails, and React. 
 
 
