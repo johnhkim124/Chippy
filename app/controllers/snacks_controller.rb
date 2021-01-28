@@ -10,7 +10,7 @@ class SnacksController < ApplicationController
 
   # GET /snacks/1
   def show
-    render json: @snack
+    render json: @snack, include: :flavors
   end
 
   # POST /snacks
@@ -26,6 +26,7 @@ class SnacksController < ApplicationController
 
   # PATCH/PUT /snacks/1
   def update
+    @snack = @current_user.snacks.find(params[:id])
     if @snack.update(snack_params)
       render json: @snack
     else
@@ -35,6 +36,7 @@ class SnacksController < ApplicationController
 
   # DELETE /snacks/1
   def destroy
+    @snack = @current_user.snacks.find(params[:id])
     @snack.destroy
   end
 
@@ -46,6 +48,6 @@ class SnacksController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def snack_params
-      params.fetch(:snack, {})
+      params.require(:snacks).permit(:name)
     end
 end
