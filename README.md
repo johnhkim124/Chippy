@@ -103,14 +103,31 @@ association._
 src
 |__ containers/
       |__ MainContainer.jsx
-      |__ graphics
-      |__ images
-      |__ mockups
 |__ layouts/
-      |__ 
-|__ components/
-      |__ Header.jsx
+      |__ footer/
+            |__ Footer.jsx
+      |__ layout/
+            |__ Layout.jsx
+      |__ nav/
+            |__ Nav.jsx
+|__ screens/
+      |__ Login
+            |__ Login.jsx
+      |__ Register
+            |__ Register.jsx
+      |__ Snacks
+            |__ Snacks.jsx
+      |__ SnackDeatails
+            |__ SnackDeatails.jsx
+      |__ AddSnack
+            |__ AddSnack.jsx
+      |__ EditSnack
+            |__ EditSnack.jsx
 |__ services/
+      |__ api-config.js
+      |__ auth.js
+      |__ snacks.js
+      |__ flavors.js
 
 ```
 
@@ -122,15 +139,23 @@ src
 
 #### Time Estimates
 
-> Use this section to estimate the time necessary to build out each of the components you've described above.
-
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Add Contact Form    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
-| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| TOTAL               |          |     6 hrs      |     3 hrs     |     TBD     |
+| Project Approved    |    H     |     2 hrs      |       hrs     |     TBD     |
+| Create Rails/React  |    H     |     1 hrs      |       hrs     |     TBD     |
+| User Auth           |    H     |     3 hrs      |       hrs     |     TBD     |
+| Full CRUD Back-end  |    H     |     6 hrs      |       hrs     |     TBD     |
+| Component Layout    |    H     |     2 hrs      |       hrs     |     TBD     |
+| Component List      |    H     |     3 hrs      |       hrs     |     TBD     |
+| Component Details   |    H     |     2 hrs      |       hrs     |     TBD     |
+| Component Edit      |    H     |     1 hrs      |       hrs     |     TBD     |
+| Full CRUD Front-end |    H     |     3 hrs      |       hrs     |     TBD     |
+| Styling CSS         |    H     |     5 hrs      |       hrs     |     TBD     |
+| POST MVP            |    L     |     4 hrs      |       hrs     |     TBD     |
+| Polishing           |    L     |     3  hrs     |       hrs     |     TBD     |
+| TOTAL               |          |     6 hrs      |       hrs     |     TBD     |
 
-> _Why is this necessary? Time frames are key to the development cycle. You have limited time to code your app, and your estimates can then be used to evaluate possibilities of your MVP and post-MVP based on time needed. It's best you assume an additional hour for each component, as well as a few hours added to the total time, to play it safe._
+
 
 <br>
 
@@ -139,14 +164,18 @@ src
 #### ERD Model
 
 > Use this section to display an image of a computer generated ERD model. You can use draw.io, Lucidchart or another ERD tool.
+![ERD Model](https://puu.sh/Hbb70/0f5ad5aebf.png)
 
 <br>
 
 ***
 
 ## Post-MVP
-
-> Use this section to document ideas you've had that would be fun (or necessary) for your Post-MVP. This will be helpful when you return to your project after graduation!
+- _User Reviews
+- _User Favorites_
+- _Polished Sleek Design_
+- _Shopping Cart_
+- _Checkout Functional_
 
 ***
 
