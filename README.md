@@ -81,6 +81,10 @@ association._
 
 - Desktop Create
 
+![Edit](https://puu.sh/HblIw/ce9444c4cd.png)
+
+- Desktop Edit
+
 ![Wire Frame](https://puu.sh/Hb8MC/2aeeb8c68e.png)
 
 - Tablet Resource Index
