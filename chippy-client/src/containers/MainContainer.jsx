@@ -3,9 +3,12 @@ import { Switch, useHistory } from "react-router-dom";
 import { getAllSnacks, postSnack } from "../sevices/snacks";
 import Snacks from "../screens/Snacks";
 import AddSnack from "../screens/AddSnack";
+import Flavors from "../screens/Flavors";
+import { getAllFlavors } from "../sevices/flavors";
 
 export default function MainContainer() {
   const [snacks, setSnacks] = useState([]);
+  const [flavors, setFlavors] = useState([]);
   const history = useHistory();
 
   useEffect(() => {
@@ -15,6 +18,14 @@ export default function MainContainer() {
     };
 
     fetchSnacks();
+  }, []);
+
+  useEffect(() => {
+    const fetchFlavor = async () => {
+      const flavorData = await getAllFlavors();
+      setFlavors(flavorData);
+    };
+    fetchFlavor();
   }, []);
 
   const handleCreate = async (snackData) => {
@@ -30,6 +41,9 @@ export default function MainContainer() {
       </route>
       <route path="/snacks/new">
         <AddSnack handleCreate={handleCreate} />
+      </route>
+      <route>
+        <Flavors flavors={flavors} />
       </route>
     </Switch>
   );
