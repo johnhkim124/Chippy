@@ -5,7 +5,7 @@ export const getAllSnacks = async () => {
   return resp.data;
 }
 
-export const postFood = async (snackData) => {
+export const postSnack = async (snackData) => {
   const resp = await api.post('/snacks', snackData);
   return resp.data;
 }
