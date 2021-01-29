@@ -8,5 +8,9 @@ export default function Login(props) {
   });
   const { username, password } = formData;
 
-  return <form></form>;
+  return (
+    <form>
+      <input type="text"></input>
+    </form>
+  );
 }
