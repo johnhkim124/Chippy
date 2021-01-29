@@ -4,6 +4,7 @@ import { Switch, Route, useHistory } from "react-router-dom";
 import Layout from "./components/layout/layout/Layout";
 import { loginUser, registerUser, verifyUser, removeToken } from "./sevices/auth";
 import Login from "./screens/Login"
+import Signup from './screens/Signup';
 
 
 function App() {
@@ -24,15 +25,28 @@ function App() {
     history.push("/")
   }
 
+  const handleLogout = () => {
+    setCurrentUser(null);
+    localStorage.removeItem('authToken');
+    removeToken();
+  }
 
+  const handleRegister = async (registerData) => {
+    const userData = await registerUser(registerData);
+    setCurrentUser(userData);
+    history.push("/")
+  }
 
 
 
   return (
-    <Layout>
+    <Layout currentUser={currentUser} handleLogout={handleLogout}>
       <Switch>
         <Route path="/login">
-          <Login/>
+          <Login handleLogin={handleLogin}/>
+        </Route>
+        <Route path="/signup">
+          <Signup handleRegister={handleRegister}/>
         </Route>
       </Switch>
     </Layout>
