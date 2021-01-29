@@ -1,5 +1,6 @@
 class SnacksController < ApplicationController
   before_action :set_snack, only: [:show, :update, :destroy]
+  before_action :authorize_request, only: [:create, :update, :destroy]
 
   # GET /snacks
   def index
@@ -48,6 +49,6 @@ class SnacksController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def snack_params
-      params.require(:snacks).permit(:name)
+      params.require(:snacks).permit(:name, :user_id, :brand, :category, :origin, :price)
     end
 end
