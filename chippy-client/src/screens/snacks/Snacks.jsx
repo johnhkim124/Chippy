@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
 
 export default function Snacks(props) {
   const { snacks } = props;
@@ -6,12 +7,14 @@ export default function Snacks(props) {
     <div>
       <h3>All Snacks</h3>
       {snacks.map((snack) => (
-        <div>
-          <img src={snack.img_url}></img>
-          <p>{snack.name}</p>
-          <p>{snack.price}</p>
-          <p>{snack.origin}</p>
-        </div>
+        <Link to={`${props._id}`}>
+          <div>
+            <img src={snack.img_url}></img>
+            <p>{snack.name}</p>
+            <p>{snack.price}</p>
+            <p>{snack.origin}</p>
+          </div>
+        </Link>
       ))}
     </div>
   );
