@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import { Switch, useHistory } from "react-router-dom";
 import { getAllSnacks, postSnack } from "../sevices/snacks";
-import Snacks from "../screens/Snacks";
-import AddSnack from "../screens/AddSnack";
-import Flavors from "../screens/Flavors";
+import Snacks from "../screens/snacks/Snacks";
+import AddSnack from "../screens/addSnack/AddSnack";
+import Flavors from "../screens/flavors/Flavors";
 import { getAllFlavors } from "../sevices/flavors";
 
 export default function MainContainer() {
@@ -42,7 +42,7 @@ export default function MainContainer() {
       <route path="/snacks/new">
         <AddSnack handleCreate={handleCreate} />
       </route>
-      <route>
+      <route path="/flavors">
         <Flavors flavors={flavors} />
       </route>
     </Switch>

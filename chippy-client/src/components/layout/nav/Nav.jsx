@@ -12,6 +12,9 @@ const Nav = (props) => {
             <>
               <p>{currentUser.username}</p>
               <button onClick={handleLogout}>Logout</button>
+              <Link to="/foods/new">
+                <button>Create</button>
+              </Link>
             </>
           ) : (
             <>
@@ -28,6 +31,9 @@ const Nav = (props) => {
           </Link>
           <Link to="/flavors">
             <ul>Flavors</ul>
+          </Link>
+          <Link to="/categories">
+            <ul>Categories</ul>
           </Link>
         </nav>
       </div>

@@ -6,11 +6,13 @@ export default function Snacks(props) {
     <div>
       <h3>All Snacks</h3>
       {snacks.map((snack) => (
-        <p>{snack.name}</p>
+        <div>
+          <img src={snack.img_url}></img>
+          <p>{snack.name}</p>
+          <p>{snack.price}</p>
+          <p>{snack.origin}</p>
+        </div>
       ))}
-      <Link to="/foods/new">
-        <button>Create</button>
-      </Link>
     </div>
   );
 }

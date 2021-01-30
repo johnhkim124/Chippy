@@ -3,8 +3,8 @@ import { useEffect, useState } from "react";
 import { Switch, Route, useHistory } from "react-router-dom";
 import Layout from "./components/layout/layout/Layout";
 import { loginUser, registerUser, verifyUser, removeToken } from "./sevices/auth";
-import Login from "./screens/Login"
-import Signup from './screens/Signup';
+import Login from "./screens/login/Login"
+import Signup from './screens/signup/Signup';
 import MainContainer from "./containers/MainContainer"
 
 
