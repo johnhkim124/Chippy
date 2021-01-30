@@ -1,19 +1,25 @@
 import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
+import { getSnack } from "../../sevices/snacks";
 
 const SnackDetail = (props) => {
   const [snack, setSnack] = useState(null);
+  const [isLoaded, setLoaded] = useState(false);
   const { id } = useParams();
-  const { snacks } = props;
 
   useEffect(() => {
-    if (snacks.length) {
-      const singleSnack = snacks.find((snack) => {
-        return snack.id === Number(id);
-      });
-      setSnack(singleSnack);
-    }
-  }, [snacks, id]);
+    const fetchSnack = async () => {
+      const snack = await getSnack(id);
+      setSnack(snack);
+      setLoaded(true);
+    };
+    fetchSnack();
+  }, [id]);
+
+  if (!isLoaded) {
+    return <h1>Loading...</h1>;
+  }
+
   return (
     <div>
       {snack && (

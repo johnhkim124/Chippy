@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Redirect } from "react-router-dom";
 
 export default function AddSnack(props) {
   const [formData, setFormData] = useState({
@@ -77,6 +78,7 @@ export default function AddSnack(props) {
           onChange={handleChange}
         />
       </label>
+      <button>Create Snack</button>
     </form>
   );
 }

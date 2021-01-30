@@ -11,7 +11,7 @@ export const getAllSnacks = async () => {
 
 export const postSnack = async (snackData) => {
   try {
-    const resp = await api.post('/snacks', snackData);
+    const resp = await api.post('/snacks', {snacks: snackData });
     return resp.data;
   } catch (error) {
     throw error
