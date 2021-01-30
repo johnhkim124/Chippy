@@ -37,16 +37,16 @@ export default function MainContainer() {
 
   return (
     <Switch>
-      <route path="/snacks">
+      <route exact path="/snacks">
         <Snacks snacks={snacks} />
       </route>
-      <route path="/snacks/new">
+      <route exact path="/snacks/new">
         <AddSnack handleCreate={handleCreate} />
       </route>
       <route path="/flavors">
         <Flavors flavors={flavors} />
       </route>
-      <route path="/snacks/:id">
+      <route exact path="/snacks/:id">
         <SnackDetail snacks={snacks} />
       </route>
     </Switch>
