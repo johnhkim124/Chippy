@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
-import { Switch, useHistory } from "react-router-dom";
-import { getAllSnacks, postSnack } from "../sevices/snacks";
+import { Switch, useHistory, useParams } from "react-router-dom";
+import { getAllSnacks, postSnack, getSnack } from "../sevices/snacks";
 import Snacks from "../screens/snacks/Snacks";
 import AddSnack from "../screens/addSnack/AddSnack";
 import Flavors from "../screens/flavors/Flavors";
+import SnackDetail from "../screens/snackDetail/SnackDetail";
 import { getAllFlavors } from "../sevices/flavors";
 
 export default function MainContainer() {
@@ -44,6 +45,9 @@ export default function MainContainer() {
       </route>
       <route path="/flavors">
         <Flavors flavors={flavors} />
+      </route>
+      <route path="/snacks/:id">
+        <SnackDetail snacks={snacks} />
       </route>
     </Switch>
   );
