@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import { useParams, Link } from "react-router-dom";
-import { getSnack } from "../../sevices/snacks";
+import { useParams, Link, Redirect } from "react-router-dom";
+import { getSnack, deleteSnack } from "../../sevices/snacks";
 
 const SnackDetail = (props) => {
   const [snack, setSnack] = useState(null);
@@ -37,7 +37,7 @@ const SnackDetail = (props) => {
               <button>Edit</button>
             </Link>
 
-            <button>Delete</button>
+            <button onClick={() => deleteSnack(snack.id)}>Delete</button>
           </div>
         </>
       )}

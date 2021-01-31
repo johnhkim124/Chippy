@@ -1,0 +1,19 @@
+nav {
+  background-color: yellow;
+  display: grid;
+  grid-template-areas: "L B U";
+  /* Links Brand User */
+}
+
+.links {
+  grid-area: L;
+  display: flex;
+}
+
+.brand {
+  grid-area: B;
+}
+
+.user {
+  grid-area: U;
+}

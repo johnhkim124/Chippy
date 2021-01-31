@@ -1,5 +1,6 @@
 import Nav from "../nav/Nav";
 import Footer from "../footer/Footer";
+import "./Layout.css";
 
 const Layout = (props) => {
   const { currentUser, handleLogout } = props;

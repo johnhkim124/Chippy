@@ -7,34 +7,43 @@ const Nav = (props) => {
     <>
       <div className="nav-container">
         <nav>
-          <h1>Brand</h1>
+          <div className="brand">
+            <h1>Brand</h1>
+          </div>
+
           {currentUser ? (
             <>
-              <p>{currentUser.username}</p>
-              <button onClick={handleLogout}>Logout</button>
-              <Link to="/new-snack">
-                <button>Create</button>
-              </Link>
+              <div className="user">
+                <p>{currentUser.username}</p>
+                <button onClick={handleLogout}>Logout</button>
+                <Link to="/new-snack">
+                  <button>Create</button>
+                </Link>
+              </div>
             </>
           ) : (
             <>
-              <Link to="/login">Login</Link>
-              <Link to="/signup">Sign Up</Link>
+              <div className="user">
+                <Link to="/login">Login</Link>
+                <Link to="/signup">Sign Up</Link>
+              </div>
             </>
           )}
           {currentUser && <></>}
-          <Link to="/snacks">
-            <ul>Explore</ul>
-          </Link>
-          <Link to="/countries">
-            <ul>Countries</ul>
-          </Link>
-          <Link to="/flavors">
-            <ul>Flavors</ul>
-          </Link>
-          <Link to="/categories">
-            <ul>Categories</ul>
-          </Link>
+          <div className="links">
+            <Link to="/snacks">
+              <ul>Explore</ul>
+            </Link>
+            <Link to="/countries">
+              <ul>Countries</ul>
+            </Link>
+            <Link to="/flavors">
+              <ul>Flavors</ul>
+            </Link>
+            <Link to="/categories">
+              <ul>Categories</ul>
+            </Link>
+          </div>
         </nav>
       </div>
     </>
