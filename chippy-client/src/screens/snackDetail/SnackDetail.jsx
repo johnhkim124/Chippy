@@ -33,7 +33,10 @@ const SnackDetail = (props) => {
             <p>{snack.category}</p>
             <p>{snack.origin}</p>
             <button>Add to Cart</button>
-            <button>Edit</button>
+            <Link to={`/${snack.id}/edit`}>
+              <button>Edit</button>
+            </Link>
+
             <button>Delete</button>
           </div>
         </>

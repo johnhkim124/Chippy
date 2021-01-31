@@ -5,6 +5,7 @@ import Snacks from "../screens/snacks/Snacks";
 import AddSnack from "../screens/addSnack/AddSnack";
 import Flavors from "../screens/flavors/Flavors";
 import SnackDetail from "../screens/snackDetail/SnackDetail";
+import EditItem from "../screens/editItem/EditItem";
 import { getAllFlavors } from "../sevices/flavors";
 
 export default function MainContainer() {
@@ -46,8 +47,11 @@ export default function MainContainer() {
       <Route exact path="/snacks/:id">
         <SnackDetail snacks={snacks} />
       </Route>
-      <Route>
+      <Route path="/new-snack">
         <AddSnack handleCreate={handleCreate} />
+      </Route>
+      <Route exact path="/:id/edit">
+        <EditItem />
       </Route>
     </Switch>
   );

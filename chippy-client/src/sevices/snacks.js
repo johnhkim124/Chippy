@@ -29,7 +29,7 @@ export const getSnack = async (id) => {
 
 export const updateSnack = async (id, snack) => {
   try {
-    const resp = await api.put(`/snacks/${id}`, snack)
+    const resp = await api.put(`/snacks/${id}`, { snacks: snack });
     return resp.data
   } catch (error) {
     throw error

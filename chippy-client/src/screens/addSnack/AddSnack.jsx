@@ -41,11 +41,18 @@ export default function AddSnack(props) {
           name="user_id"
           value={user_id}
           onChange={handleChange}
+          required
         />
       </label>
       <label>
         Brand:
-        <input type="text" name="brand" value={brand} onChange={handleChange} />
+        <input
+          type="text"
+          name="brand"
+          value={brand}
+          onChange={handleChange}
+          required
+        />
       </label>
       <label>
         Category:
@@ -54,6 +61,7 @@ export default function AddSnack(props) {
           name="category"
           value={category}
           onChange={handleChange}
+          required
         />
       </label>
       <label>
@@ -63,11 +71,18 @@ export default function AddSnack(props) {
           name="origin"
           value={origin}
           onChange={handleChange}
+          required
         />
       </label>
       <label>
         Price:
-        <input type="text" name="price" value={price} onChange={handleChange} />
+        <input
+          type="text"
+          name="price"
+          value={price}
+          onChange={handleChange}
+          required
+        />
       </label>
       <label>
         Image URL:
@@ -76,6 +91,7 @@ export default function AddSnack(props) {
           name="img_url"
           value={img_url}
           onChange={handleChange}
+          required
         />
       </label>
       <button>Create Snack</button>

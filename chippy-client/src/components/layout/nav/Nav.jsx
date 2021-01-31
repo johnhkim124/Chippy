@@ -12,7 +12,7 @@ const Nav = (props) => {
             <>
               <p>{currentUser.username}</p>
               <button onClick={handleLogout}>Logout</button>
-              <Link to="/foods/new">
+              <Link to="/new-snack">
                 <button>Create</button>
               </Link>
             </>
