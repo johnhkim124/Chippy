@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams, Link, Redirect } from "react-router-dom";
 import { getSnack, deleteSnack } from "../../sevices/snacks";
+import "./snackDetail.css";
 
 const SnackDetail = (props) => {
   const [snack, setSnack] = useState(null);
@@ -21,18 +22,18 @@ const SnackDetail = (props) => {
   }
 
   return (
-    <div>
+    <div className="snack-detail-div">
       {snack && (
         <>
-          <div>
+          <div className="snack-img-div">
             <img src={snack.img_url} alt={snack.name} />
           </div>
-          <div>
+          <div className="snack-info">
             <h1>{snack.name}</h1>
-            <h3>{snack.price}</h3>
-            <p>{snack.category}</p>
+            <p>Category: {snack.category}</p>
             <p>{snack.origin}</p>
-            <button>Add to Cart</button>
+            <h3>Prices: ${snack.price}</h3>
+            <button className="add-to-cart">Add to Cart</button>
             <Link to={`/${snack.id}/edit`}>
               <button>Edit</button>
             </Link>

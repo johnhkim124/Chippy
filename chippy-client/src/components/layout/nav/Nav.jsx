@@ -14,7 +14,7 @@ const Nav = (props) => {
           {currentUser ? (
             <>
               <div className="user">
-                <p>{currentUser.username}</p>
+                <p>Hello, {currentUser.username}</p>
                 <button onClick={handleLogout}>Logout</button>
                 <Link to="/new-snack">
                   <button>Create</button>
