@@ -1,7 +1,7 @@
 import "./snacks.css";
 import SingleSnack from "../../components/singleSnack/SingleSnack";
 import Search from "../../components/search/Search";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Snacks(props) {
   const { snacks } = props;
