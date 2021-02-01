@@ -7,6 +7,7 @@ const SnackDetail = (props) => {
   const [snack, setSnack] = useState(null);
   const [isLoaded, setLoaded] = useState(false);
   const { id } = useParams();
+  const [qty, setQty] = useState(1);
 
   useEffect(() => {
     const fetchSnack = async () => {
@@ -16,6 +17,10 @@ const SnackDetail = (props) => {
     };
     fetchSnack();
   }, [id]);
+
+  const addHandler = () => {
+    props.history.push(`/carts/${snack.id}`);
+  };
 
   if (!isLoaded) {
     return <h1>Loading...</h1>;
@@ -33,6 +38,10 @@ const SnackDetail = (props) => {
             <p>Category: {snack.category}</p>
             <p>{snack.origin}</p>
             <h3>Prices: ${snack.price}</h3>
+            <select value={qty} onChange={(e) => setQty(e.target.value)}>
+              <option>1</option>
+              <option>2</option>
+            </select>
             <button className="add-to-cart">Add to Cart</button>
             <Link to={`/${snack.id}/edit`}>
               <button>Edit</button>

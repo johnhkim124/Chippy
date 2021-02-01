@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   resources :cart_items
-  resources :carts
+  resource :carts do
+    member do
+      post "addToCart"
+    end
+  end
   resources :flavors
   resources :users
   resources :snacks
