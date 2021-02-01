@@ -9,6 +9,7 @@ const SnackDetail = (props) => {
   const [isLoaded, setLoaded] = useState(false);
   const { id } = useParams();
   const history = useHistory();
+  const { handleAddToCart } = props;
 
   // const [qty, setQty] = useState(1);
 
@@ -22,11 +23,6 @@ const SnackDetail = (props) => {
   }, [id]);
 
   // const addToCartHandler = async () => {};
-
-  const deleteHandler = (props) => {
-    deleteSnack(snack.id);
-    history.push(`/snacks`);
-  };
 
   if (!isLoaded) {
     return <h1>Loading...</h1>;
@@ -48,12 +44,14 @@ const SnackDetail = (props) => {
               <option>1</option>
               <option>2</option>
             </select> */}
-            <button className="add-to-cart">Add to Cart</button>
+            <button className="add-to-cart" onClick={handleAddToCart}>
+              Add to Cart
+            </button>
             <Link to={`/${snack.id}/edit`}>
               <button>Edit</button>
             </Link>
 
-            <button onClick={deleteHandler}>Delete</button>
+            <button onClick={() => deleteSnack(snack.id)}>Delete</button>
           </div>
         </>
       )}

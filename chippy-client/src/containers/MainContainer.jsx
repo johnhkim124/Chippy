@@ -48,8 +48,8 @@ export default function MainContainer(props) {
   };
 
   const handleAddToCart = async (cartData) => {
-    const addToCart = await addToCart(cartData);
-    setCartSnacks((prevState) => [...prevState, addToCart]);
+    const addSnack = await addToCart(cartData);
+    setCartSnacks((prevState) => [...prevState, addSnack]);
   };
 
   return (
@@ -61,7 +61,11 @@ export default function MainContainer(props) {
         <Flavors flavors={flavors} />
       </Route>
       <Route exact path="/snacks/:id">
-        <SnackDetail snacks={snacks} cartSnacks={cartSnacks} />
+        <SnackDetail
+          snacks={snacks}
+          cartSnacks={cartSnacks}
+          handleAddToCart={handleAddToCart}
+        />
       </Route>
       <Route path="/new-snack">
         <AddSnack handleCreate={handleCreate} />
