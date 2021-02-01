@@ -1,5 +1,4 @@
 .snacks-div {
-  background-color: blue;
   display: grid;
   grid-template-columns: 13% 13% 13% 13% 13%;
   grid-template-rows: auto;

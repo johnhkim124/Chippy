@@ -40,9 +40,6 @@ const Nav = (props) => {
             <Link to="/flavors">
               <ul>Flavors</ul>
             </Link>
-            <Link to="/categories">
-              <ul>Categories</ul>
-            </Link>
           </div>
         </nav>
       </div>
