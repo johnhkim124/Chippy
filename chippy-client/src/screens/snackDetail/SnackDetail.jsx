@@ -1,13 +1,16 @@
 import { useState, useEffect } from "react";
-import { useParams, Link, Redirect } from "react-router-dom";
+import { useParams, Link, useHistory } from "react-router-dom";
 import { getSnack, deleteSnack } from "../../sevices/snacks";
+import { addToCart } from "../../sevices/cart";
 import "./snackDetail.css";
 
 const SnackDetail = (props) => {
   const [snack, setSnack] = useState(null);
   const [isLoaded, setLoaded] = useState(false);
   const { id } = useParams();
-  const [qty, setQty] = useState(1);
+  const history = useHistory();
+
+  // const [qty, setQty] = useState(1);
 
   useEffect(() => {
     const fetchSnack = async () => {
@@ -18,8 +21,11 @@ const SnackDetail = (props) => {
     fetchSnack();
   }, [id]);
 
-  const addHandler = () => {
-    props.history.push(`/carts/${snack.id}`);
+  // const addToCartHandler = async () => {};
+
+  const deleteHandler = (props) => {
+    deleteSnack(snack.id);
+    history.push(`/snacks`);
   };
 
   if (!isLoaded) {
@@ -38,16 +44,16 @@ const SnackDetail = (props) => {
             <p>Category: {snack.category}</p>
             <p>{snack.origin}</p>
             <h3>Prices: ${snack.price}</h3>
-            <select value={qty} onChange={(e) => setQty(e.target.value)}>
+            {/* <select value={qty} onChange={(e) => setQty(e.target.value)}>
               <option>1</option>
               <option>2</option>
-            </select>
+            </select> */}
             <button className="add-to-cart">Add to Cart</button>
             <Link to={`/${snack.id}/edit`}>
               <button>Edit</button>
             </Link>
 
-            <button onClick={() => deleteSnack(snack.id)}>Delete</button>
+            <button onClick={deleteHandler}>Delete</button>
           </div>
         </>
       )}
