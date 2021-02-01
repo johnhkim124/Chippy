@@ -1,0 +1,13 @@
+.snack-detail-div {
+  background-color: red;
+  display: flex;
+  width: 50%;
+  flex-direction: row;
+  margin: 10% auto;
+  justify-content: center;
+}
+
+.snack-detail-div img {
+  width: 100%;
+  margin: 20px;
+}

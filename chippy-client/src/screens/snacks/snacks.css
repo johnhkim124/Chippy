@@ -1,0 +1,37 @@
+.snacks-div {
+  display: grid;
+  grid-template-columns: 13% 13% 13% 13% 13%;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "t t t t t"
+    "s s s p p";
+  /* s->snack p->promo */
+}
+
+.title {
+  grid-area: t;
+}
+
+.single-snack-div {
+  /* background-color: yellow; */
+
+  margin: 20px;
+  width: 200px;
+  /* grid-area: s; */
+}
+
+.single-snack-div img {
+  width: 100%;
+}
+
+.snack-img-div {
+  margin: 20px;
+}
+
+.promo {
+  grid-area: p;
+}
+
+.snack-detail {
+  margin: 30px;
+}
