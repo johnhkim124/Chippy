@@ -27,6 +27,8 @@ puts "#{User.count} users created"
 @kitKatStrawberry = Snack.create!(name: "Kit Kat Strawberry", user: @admin, brand: "Kit-Kat", category:"chocolate", origin: "Japan", price: 2, img_url: "https://m.media-amazon.com/images/I/61HsL3Y-BkL._AC_UL320_.jpg")
 @Orion = Snack.create!(name: "Orion Sweet & Salty", user: @admin, brand: "Orion", category:"sweet cracker", origin: "Korea", price: 2, img_url: "https://m.media-amazon.com/images/I/61SGkyE918L._AC_UL320_.jpg")
 @sourpatch = Snack.create!(name: "Sour Patch Kids", user:@admin, brand: "Sour Patch Kids", category:"sour candy", origin: "U.S.", price: 3, img_url: "https://m.media-amazon.com/images/I/81SFEy-bzlL._AC_UL320_.jpg")
+@snakyard = Snack.create!(name: "Shitake Mushrooms", user:@admin, brand: "Snak Yard", category: "mushroom snack", origin: "U.S.", price: 5, img_url:"https://m.media-amazon.com/images/I/71J4R-GSiKL._AC_UL320_.jpg")
+@lindt = Snack.create!(name: "Lindt Dark Chocolate", user:@admin, brand: "Lindt", category:"dark chocolate", origin:"Switzerland", price: 4, img_url:"https://m.media-amazon.com/images/I/71vVSDRa-ZL._AC_UL320_.jpg")
 
 
 puts "#{Snack.count} snacks created"
@@ -48,7 +50,8 @@ puts "#{Flavor.count} flavors created"
 @kitKatSweetPotato.flavors.push(@sweet)
 @Orion.flavors.push(@sweet, @salty)
 @sourpatch.flavors.push(@sweet, @sour)
-
+@snakyard.flavors.push(@salty, @umami)
+@lindt.flavors.push(@sweet, @bitter)
 
 @cartTest = Cart.create!(user_id: @admin.id)
 puts "#{Cart.count} carts created"
