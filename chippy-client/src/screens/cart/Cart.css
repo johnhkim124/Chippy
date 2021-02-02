@@ -1,3 +1,8 @@
+.shopping-cart-div {
+  display: flex;
+  flex-direction: column;
+}
+
 .single-cart-div {
   width: 20%;
   display: flex;

@@ -30,7 +30,7 @@ const Cart = (props) => {
   });
 
   return (
-    <div>
+    <div className="shopping-cart-div">
       <h1>Shopping Cart</h1>
       <div className="cart-div">{mappedCartSnacks}</div>
     </div>

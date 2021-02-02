@@ -9,6 +9,7 @@ const SingleSnack = (props) => {
         <div className="details-container">
           <h1>{props.name}</h1>
           <h3>${props.price}</h3>
+          <h3>{props.origin}</h3>
         </div>
       </Link>
     </>

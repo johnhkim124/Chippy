@@ -1,9 +1,10 @@
 .snacks-div {
   display: flex;
+  justify-content: center;
 }
 
 .single-snack-div {
-  margin: 20px;
+  margin: 100px;
   width: 200px;
 }
 
