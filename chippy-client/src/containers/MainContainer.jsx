@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Switch, useHistory, Route, Redirect } from "react-router-dom";
 import { getAllSnacks, postSnack, getSnack } from "../sevices/snacks";
+import Home from "../screens/home/Home";
 import Snacks from "../screens/snacks/Snacks";
 import AddSnack from "../screens/addSnack/AddSnack";
 import Flavors from "../screens/flavors/Flavors";
@@ -48,10 +49,13 @@ export default function MainContainer(props) {
 
   return (
     <Switch>
+      <Route exact path="/">
+        <Home />
+      </Route>
       <Route exact path="/snacks">
         <Snacks snacks={snacks} />
       </Route>
-      <Route path="/flavors">
+      <Route exact path="/flavors">
         <Flavors flavors={flavors} />
       </Route>
       <Route exact path="/snacks/:id">

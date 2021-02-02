@@ -1,36 +1,43 @@
 import SingleSnack from "../../components/singleSnack/SingleSnack";
 import { useEffect, useState } from "react";
 import { getAllFlavors, getFlavor } from "../../sevices/flavors";
+import { useParams } from "react-router-dom";
 
 export default function Snacks(props) {
-  const [flavorSnacks, setflavorSnacks] = useState([]);
+  const [flavorSnacks, setflavorSnacks] = useState(null);
+  const { id } = useParams();
 
   useEffect(() => {
-    const fetchFlavors = async () => {
-      const flavorSnacks = await getFlavor();
+    const fetchFlavors = async (id) => {
+      const flavorSnacks = await getFlavor(id);
       setflavorSnacks(flavorSnacks);
     };
-    fetchFlavors();
+    fetchFlavors(id);
   }, []);
 
-  const mappedFlavorSnacks = flavorSnacks.snacks.map((snack, index) => {
-    return (
-      <div className="single-snack-div">
-        <SingleSnack
-          id={snack.id}
-          imgURL={snack.img_url}
-          name={snack.name}
-          price={snack.price}
-          origin={snack.origin}
-          key={index}
-        />
-      </div>
-    );
-  });
+  const mappedFlavorSnacks =
+    flavorSnacks &&
+    flavorSnacks.snacks.map((snack, index) => {
+      return (
+        <div className="single-snack-div">
+          <SingleSnack
+            id={snack.id}
+            imgURL={snack.img_url}
+            name={snack.name}
+            price={snack.price}
+            origin={snack.origin}
+            key={index}
+          />
+        </div>
+      );
+    });
 
   return (
-    <>
-      <div className="snacks-div">{mappedFlavorSnacks}</div>
-    </>
+    flavorSnacks && (
+      <>
+        <h1>{flavorSnacks.name}</h1>
+        <div className="snacks-div">{mappedFlavorSnacks}</div>
+      </>
+    )
   );
 }

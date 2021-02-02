@@ -1,5 +1,7 @@
 import "./Nav.css";
 import { Link } from "react-router-dom";
+import AddShoppingCartIcon from "@material-ui/icons/AddShoppingCart";
+import IconButton from "@material-ui/core/IconButton";
 
 const Nav = (props) => {
   const { currentUser, handleLogout } = props;
@@ -40,7 +42,11 @@ const Nav = (props) => {
               <ul>Flavors</ul>
             </Link>
             <Link to="/carts">
-              <ul>Cart</ul>
+              <ul>
+                <IconButton color="primary" aria-label="add to shopping cart">
+                  <AddShoppingCartIcon />
+                </IconButton>
+              </ul>
             </Link>
           </div>
         </nav>
