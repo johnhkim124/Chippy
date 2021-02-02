@@ -20,7 +20,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-
+  text-align: center;
   height: 600px;
   width: 500px;
 }
@@ -33,7 +33,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-
+  text-align: center;
   height: 600px;
   width: 500px;
 }
@@ -41,7 +41,6 @@
 #container-two-pic2 img {
   width: 100%;
   height: 80%;
-  /* background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fpartycity6.scene7.com%2Fis%2Fimage%2FPartyCity%2F_pdp_sq_%3F%24_1000x1000_%24%26%24product%3DPartyCity%2F863438_01&f=1&nofb=1"); */
 }
 
 .promotion-button {
