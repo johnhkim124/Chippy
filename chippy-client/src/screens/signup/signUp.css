@@ -1,4 +1,4 @@
-form {
+.signUpForm {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -8,10 +8,4 @@ form {
   text-align: center;
   margin: 100px auto;
   border-radius: 10px;
-}
-
-form button {
-  margin: 10px;
-  text-decoration: none;
-  /* width: 100px; */
 }
