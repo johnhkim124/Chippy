@@ -2,45 +2,38 @@ import "./snacks.css";
 import SingleSnack from "../../components/singleSnack/SingleSnack";
 import Search from "../../components/search/Search";
 import { useEffect, useState } from "react";
+import { getAllSnacks } from "../../sevices/snacks";
 
 export default function Snacks(props) {
   const { snacks } = props;
   const [quieredSnacks, setQuieredSnacks] = useState([]);
 
+  useEffect(() => {
+    const fetchSnacks = async () => {
+      const snacks = await getAllSnacks();
+      setQuieredSnacks(snacks);
+    };
+    fetchSnacks();
+  }, []);
+
   const mappedSnacks = quieredSnacks.map((snack, index) => {
     return (
-      <SingleSnack
-        id={snack.id}
-        imgURL={snack.img_url}
-        name={snack.name}
-        price={snack.price}
-        origin={snack.origin}
-        key={index}
-      />
+      <div className="single-snack-div">
+        <SingleSnack
+          id={snack.id}
+          imgURL={snack.img_url}
+          name={snack.name}
+          price={snack.price}
+          origin={snack.origin}
+          key={index}
+        />
+      </div>
     );
   });
 
-  const handleSubmit = (e) => e.preventDefault();
-
-  const handleSearch = (e) => {
-    const newQuieredSnacks = snacks.filter((snack) =>
-      snack.name.toLowerCase().include(e.target.value.toLowerCase())
-    );
-    setQuieredSnacks(newQuieredSnacks);
-  };
-
   return (
     <>
-      <div className="search-div">
-        <Search onSubmit={handleSubmit} onChange={handleSearch} />
-      </div>
-      <div className="snacks-div">
-        <h3 className="title">All Snacks</h3>
-
-        <div className="single-snack-div">{mappedSnacks}</div>
-
-        <div className="promo">PROMO</div>
-      </div>
+      <div className="snacks-div">{mappedSnacks}</div>
     </>
   );
 }

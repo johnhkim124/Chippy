@@ -1,2 +1,25 @@
-.singleSnack-div {
+.singleSnack {
+  display: flex;
+  flex-direction: column;
+  border: solid black 1px;
+  display: flex;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  width: 120%;
+  text-decoration: none;
+}
+
+.singleSnack :hover {
+  /* transform: scale(1.1);
+  box-shadow: 10px 5px 5px black; */
+}
+
+.singleSnackImg {
+  width: 10px;
+}
+
+.details-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }

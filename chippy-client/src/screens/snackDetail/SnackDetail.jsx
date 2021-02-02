@@ -7,11 +7,10 @@ import "./snackDetail.css";
 const SnackDetail = (props) => {
   const [snack, setSnack] = useState(null);
   const [isLoaded, setLoaded] = useState(false);
+  const [refresh, setRefresh] = useState(false);
   const { id } = useParams();
   const history = useHistory();
   const { handleAddToCart } = props;
-
-  // const [qty, setQty] = useState(1);
 
   useEffect(() => {
     const fetchSnack = async () => {
@@ -20,9 +19,7 @@ const SnackDetail = (props) => {
       setLoaded(true);
     };
     fetchSnack();
-  }, [id]);
-
-  // const addToCartHandler = async () => {};
+  }, [id, refresh]);
 
   if (!isLoaded) {
     return <h1>Loading...</h1>;
@@ -40,18 +37,28 @@ const SnackDetail = (props) => {
             <p>Category: {snack.category}</p>
             <p>{snack.origin}</p>
             <h3>Prices: ${snack.price}</h3>
-            {/* <select value={qty} onChange={(e) => setQty(e.target.value)}>
-              <option>1</option>
-              <option>2</option>
-            </select> */}
-            <button className="add-to-cart" onClick={handleAddToCart}>
+
+            <button
+              className="add-to-cart"
+              onClick={() => {
+                handleAddToCart(snack.id);
+              }}
+            >
               Add to Cart
             </button>
             <Link to={`/${snack.id}/edit`}>
               <button>Edit</button>
             </Link>
 
-            <button onClick={() => deleteSnack(snack.id)}>Delete</button>
+            <button
+              onClick={async () => {
+                await deleteSnack(snack.id);
+                history.push("/snacks");
+                setRefresh(!refresh);
+              }}
+            >
+              Delete
+            </button>
           </div>
         </>
       )}

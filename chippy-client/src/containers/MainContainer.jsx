@@ -14,7 +14,6 @@ export default function MainContainer(props) {
   const [snacks, setSnacks] = useState([]);
   const [flavors, setFlavors] = useState([]);
   const history = useHistory();
-  const [cartSnacks, setCartSnacks] = useState([]);
 
   useEffect(() => {
     const fetchSnacks = async () => {
@@ -33,14 +32,6 @@ export default function MainContainer(props) {
     fetchFlavor();
   }, []);
 
-  useEffect(() => {
-    const fetchCart = async () => {
-      const cartData = await getCart();
-      setCartSnacks(cartData);
-    };
-    fetchCart();
-  }, [props.currrentUser]);
-
   const handleCreate = async (snackData) => {
     const newSnack = await postSnack(snackData);
     setSnacks((prevState) => [...prevState, newSnack]);
@@ -48,8 +39,10 @@ export default function MainContainer(props) {
   };
 
   const handleAddToCart = async (cartData) => {
+    console.log(cartData);
     const addSnack = await addToCart(cartData);
-    setCartSnacks((prevState) => [...prevState, addSnack]);
+
+    // setCartSnacks((prevState) => [...prevState, addSnack]);
   };
 
   return (
@@ -61,11 +54,7 @@ export default function MainContainer(props) {
         <Flavors flavors={flavors} />
       </Route>
       <Route exact path="/snacks/:id">
-        <SnackDetail
-          snacks={snacks}
-          cartSnacks={cartSnacks}
-          handleAddToCart={handleAddToCart}
-        />
+        <SnackDetail snacks={snacks} handleAddToCart={handleAddToCart} />
       </Route>
       <Route path="/new-snack">
         <AddSnack handleCreate={handleCreate} />
@@ -74,7 +63,7 @@ export default function MainContainer(props) {
         <EditItem />
       </Route>
       <Route path="/carts">
-        <Cart cartSnacks={cartSnacks} />
+        <Cart currentUser={props.currentUser} />
       </Route>
     </Switch>
   );

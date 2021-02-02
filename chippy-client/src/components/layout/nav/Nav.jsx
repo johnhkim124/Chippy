@@ -34,9 +34,7 @@ const Nav = (props) => {
             <Link to="/snacks">
               <ul>Explore</ul>
             </Link>
-            <Link to="/countries">
-              <ul>Countries</ul>
-            </Link>
+
             <Link to="/flavors">
               <ul>Flavors</ul>
             </Link>

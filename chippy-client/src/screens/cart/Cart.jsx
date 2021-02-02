@@ -1,8 +1,17 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import SingleSnack from "../../components/singleSnack/SingleSnack";
+import { getCart } from "../../sevices/cart";
 
 const Cart = (props) => {
-  const { cartSnacks } = props;
+  const [cartSnacks, setCartSnacks] = useState([]);
+
+  useEffect(() => {
+    const fetchCart = async () => {
+      const cartData = await getCart();
+      setCartSnacks(cartData);
+    };
+    fetchCart();
+  }, [props.currentUser]);
 
   const mappedCartSnacks = cartSnacks.map((snack, index) => {
     return (
