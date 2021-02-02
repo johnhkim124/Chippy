@@ -1,7 +1,7 @@
 nav {
   background-color: yellow;
   display: grid;
-  grid-template-areas: "L B s s U";
+  grid-template-areas: "L B s s U C";
   /* Links Brand User */
 }
 
@@ -24,4 +24,8 @@ nav button {
 
 .user {
   grid-area: U;
+}
+
+.cart {
+  grid-area: C;
 }

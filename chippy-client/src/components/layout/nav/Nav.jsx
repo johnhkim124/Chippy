@@ -29,7 +29,9 @@ const Nav = (props) => {
             <>
               <div className="user">
                 <Link to="/login">Login</Link>
+                <br />
                 <Link to="/signup">Sign Up</Link>
+                <br />
               </div>
             </>
           )}
@@ -41,6 +43,8 @@ const Nav = (props) => {
             <Link to="/flavors">
               <ul>Flavors</ul>
             </Link>
+          </div>
+          <div className="cart">
             <Link to="/carts">
               <ul>
                 <IconButton color="primary" aria-label="add to shopping cart">

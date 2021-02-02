@@ -8,9 +8,9 @@ export default function Flavor(props) {
       <h1>Flavors</h1>
 
       {flavors.map((flavor) => (
-        <div className="mapped-flavors">
+        <div className="flavors">
           <Link to={`/flavors/${flavor.id}`}>
-            <div>{flavor.name}</div>
+            <div className="flavor-pic-div">{flavor.name}</div>
           </Link>
         </div>
       ))}
