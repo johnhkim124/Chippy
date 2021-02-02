@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import SingleSnack from "../../components/singleSnack/SingleSnack";
 import { getCart } from "../../sevices/cart";
+import "./Cart.css";
 
 const Cart = (props) => {
   const [cartSnacks, setCartSnacks] = useState([]);
@@ -15,21 +16,23 @@ const Cart = (props) => {
 
   const mappedCartSnacks = cartSnacks.map((snack, index) => {
     return (
-      <SingleSnack
-        id={snack.id}
-        imgURL={snack.img_url}
-        name={snack.name}
-        price={snack.price}
-        origin={snack.origin}
-        key={index}
-      />
+      <div className="single-cart-div">
+        <SingleSnack
+          id={snack.id}
+          imgURL={snack.img_url}
+          name={snack.name}
+          price={snack.price}
+          origin={snack.origin}
+          key={index}
+        />
+      </div>
     );
   });
 
   return (
     <div>
       <h1>Shopping Cart</h1>
-      <div>{mappedCartSnacks}</div>
+      <div className="cart-div">{mappedCartSnacks}</div>
     </div>
   );
 };

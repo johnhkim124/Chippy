@@ -37,7 +37,9 @@ class SnacksController < ApplicationController
 
   # DELETE /snacks/1
   def destroy
+    puts params[:id];
     @snack = @current_user.snacks.find(params[:id])
+
     @snack.destroy
   end
 

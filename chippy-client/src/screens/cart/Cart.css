@@ -1,0 +1,9 @@
+.single-cart-div {
+  width: 20%;
+  display: flex;
+  margin: 0 auto;
+}
+
+.single-cart-div img {
+  width: 200px;
+}

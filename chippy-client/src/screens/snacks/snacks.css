@@ -1,7 +1,5 @@
 .snacks-div {
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
 }
 
 .single-snack-div {
