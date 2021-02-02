@@ -1,14 +1,18 @@
 import { Link } from "react-router-dom";
+import "./flavors.css";
 
 export default function Flavor(props) {
   const { flavors } = props;
   return (
-    <div>
+    <div className="flavors-div">
       <h1>Flavors</h1>
+
       {flavors.map((flavor) => (
-        <Link>
-          <div>{flavor.name}</div>
-        </Link>
+        <div className="mapped-flavors">
+          <Link to={`/flavors/${flavor.id}`}>
+            <div>{flavor.name}</div>
+          </Link>
+        </div>
       ))}
     </div>
   );

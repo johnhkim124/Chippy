@@ -7,6 +7,7 @@ import Flavors from "../screens/flavors/Flavors";
 import SnackDetail from "../screens/snackDetail/SnackDetail";
 import EditItem from "../screens/editItem/EditItem";
 import Cart from "../screens/cart/Cart";
+import FlavorSnacks from "../components/flavorSnacks/FlavorSnacks";
 import { getAllFlavors } from "../sevices/flavors";
 import { getCart, addToCart } from "../sevices/cart";
 
@@ -64,6 +65,9 @@ export default function MainContainer(props) {
       </Route>
       <Route path="/carts">
         <Cart currentUser={props.currentUser} />
+      </Route>
+      <Route path="/flavors/:id">
+        <FlavorSnacks flavors={flavors} />
       </Route>
     </Switch>
   );

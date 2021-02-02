@@ -1,0 +1,9 @@
+.flavors-div {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.mapped-flavors {
+  margin: 20px;
+}

@@ -18,7 +18,7 @@ CartItem.destroy_all
 puts "#{User.count} users created"
 
 @lays = Snack.create!(name: "Lays", user: @admin, brand: "Lays", category:"potato chip", origin: "U.S.", price: 2, img_url: "https://m.media-amazon.com/images/I/81vJyb43URL._AC_UL320_.jpg")
-@crucnh = Snack.create!(name: "Crunch", user: @admin, brand: "Nestle", category:"chocolate", origin: "U.S.", price: 2, img_url: "https://m.media-amazon.com/images/I/816zWCVMkJL._AC_UL320_.jpg")
+@crunch = Snack.create!(name: "Crunch", user: @admin, brand: "Nestle", category:"chocolate", origin: "U.S.", price: 2, img_url: "https://m.media-amazon.com/images/I/816zWCVMkJL._AC_UL320_.jpg")
 @popcorn = Snack.create!(name: "Popper", user: @admin, brand: "Popper", category:"popcorn", origin: "U.S.", price: 2, img_url: "https://m.media-amazon.com/images/I/81c6w3y22RL._AC_UL320_.jpg")
 @gummy = Snack.create!(name: "Gummy Bear", user: @admin, brand: "Sour Bears", category:"gummy", origin: "Canada", price: 4, img_url: "https://m.media-amazon.com/images/I/51P-pDGMnGL._AC_UL320_.jpg")
 @cheetos = Snack.create!(name: "Cheetos", user: @admin, brand: "Cheetos", category:"cheese", origin: "U.S.", price: 3, img_url: "https://m.media-amazon.com/images/I/91Mduj3AZOL._AC_UL320_.jpg")
@@ -44,5 +44,5 @@ puts "#{Flavor.count} flavors created"
 @cartTest = Cart.create!(user_id: @admin.id)
 puts "#{Cart.count} carts created"
 
-@cartItem = CartItem.create!(cart: @cartTest, snack: @chips, quantity: 2)
+@cartItem = CartItem.create!(cart: @cartTest, snack: @lays, quantity: 2)
 puts "#{CartItem.count} cart items created"

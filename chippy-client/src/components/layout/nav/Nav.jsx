@@ -8,7 +8,9 @@ const Nav = (props) => {
       <div className="nav-container">
         <nav>
           <div className="brand">
-            <h1>Brand</h1>
+            <Link to="/">
+              <img className="logo" src="./ChippyLogo.png" atl="Chippy Logo" />
+            </Link>
           </div>
 
           {currentUser ? (
