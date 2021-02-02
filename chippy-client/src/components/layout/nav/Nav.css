@@ -1,8 +1,16 @@
 nav {
   background-color: yellow;
   display: grid;
-  grid-template-areas: "L B U";
+  grid-template-areas: "L B s s U";
   /* Links Brand User */
+}
+
+nav a {
+  text-decoration: none;
+}
+
+nav button {
+  margin: 5px 5px 30px 5px;
 }
 
 .links {

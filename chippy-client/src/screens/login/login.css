@@ -1,0 +1,16 @@
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 300px;
+  width: 300px;
+  border: 1px black solid;
+  text-align: center;
+  margin: 100px auto;
+  border-radius: 10px;
+}
+
+form button {
+  margin: 10px;
+  text-decoration: none;
+}

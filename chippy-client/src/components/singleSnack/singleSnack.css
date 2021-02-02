@@ -12,9 +12,9 @@
   color: rgb(77, 77, 77);
 }
 
-.singleSnack :hover {
-  /* transform: scale(1.1);
-  box-shadow: 10px 5px 5px black; */
+.single-snack-div :hover {
+  transform: scale(1.1);
+  box-shadow: 10px 5px 5px rgb(77, 77, 77);
 }
 
 .singleSnackImg {

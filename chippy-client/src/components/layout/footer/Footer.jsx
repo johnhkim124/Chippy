@@ -6,9 +6,13 @@ const Footer = () => {
     <>
       <footer>
         <div className="footer-container">
-          <Link to="/snacks">
-            <ul>Browse</ul>
+          <Link to="/snacks" className="browse">
+            Browse
           </Link>
+          <br />
+          <Link to="/signup">Sign Up</Link>
+          <br />
+          <Link to="/login">Login</Link>
         </div>
       </footer>
     </>

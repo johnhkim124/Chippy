@@ -7,3 +7,7 @@
 .mapped-flavors {
   margin: 20px;
 }
+
+.mapped-flavors a {
+  text-decoration: none;
+}
