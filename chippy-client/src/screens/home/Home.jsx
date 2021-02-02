@@ -1,5 +1,7 @@
 import React from "react";
 import Carousel from "../../components/carousel/Carousel";
+import { Link } from "react-router-dom";
+import "./home.css";
 
 const Home = () => {
   return (
@@ -11,8 +13,8 @@ const Home = () => {
           <h2>Snacks from Around the Globe!</h2>
           <hr />
           <div className="text">
-            orem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl
-            eros, pulvinar facilisis
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+            nisl eros, pulvinar facilisis
           </div>
         </div>
 
@@ -20,8 +22,8 @@ const Home = () => {
           <h2>Free Shipping!</h2>
           <hr />
           <div className="text">
-            orem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl
-            eros, pulvinar facilisis
+            :orem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+            nisl eros, pulvinar facilisis
           </div>
         </div>
       </div>
@@ -29,12 +31,16 @@ const Home = () => {
       <div className="container-two">
         <div id="container-two-pic1">
           <h1>Find you Flavor</h1>
-          <button className="promotion-button">Flavors</button>
+          <Link to="/flavors">
+            <button className="promotion-button">Flavors</button>
+          </Link>
         </div>
 
         <div id="container-two-pic2">
           <h1>Snack On!</h1>
-          <button className="promotion-button">Browse All Snacks</button>
+          <Link to="/snacks">
+            <button className="promotion-button">Browse All Snacks</button>
+          </Link>
         </div>
       </div>
     </div>
