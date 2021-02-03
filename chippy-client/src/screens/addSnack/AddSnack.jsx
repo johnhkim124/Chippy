@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Redirect } from "react-router-dom";
+import "./addSnack.css";
 
 export default function AddSnack(props) {
   const [formData, setFormData] = useState({
@@ -24,12 +24,13 @@ export default function AddSnack(props) {
 
   return (
     <form
+      className="create-snack-form"
       onSubmit={(e) => {
         e.preventDefault();
         handleCreate(formData);
       }}
     >
-      <h1>Add A Snack</h1>
+      <h1 className="create-snack-title">Add A Snack</h1>
       <label>
         Name:
         <input type="text" name="name" value={name} onChange={handleChange} />

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./signUp.css";
 
 export default function Signup(props) {
   const [formData, setFormData] = useState({
@@ -20,6 +21,7 @@ export default function Signup(props) {
 
   return (
     <form
+      className="signUpForm"
       onSubmit={(e) => {
         e.preventDefault();
         handleRegister(formData);

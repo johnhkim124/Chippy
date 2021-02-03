@@ -43,8 +43,9 @@ ActiveRecord::Schema.define(version: 2021_01_31_235726) do
   create_table "snacks", force: :cascade do |t|
     t.string "name"
     t.bigint "user_id", null: false
-    t.string "brand"
     t.string "category"
+    t.string "brand"
+    t.string "type"
     t.string "origin"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

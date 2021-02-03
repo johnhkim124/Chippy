@@ -1,0 +1,26 @@
+.flavors-div {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+.flavors {
+  margin: 20px;
+  width: 20%;
+  height: 50px;
+}
+
+.flavors a {
+}
+
+.flavor-pic-div {
+  border: solid rgba(6, 114, 255, 0.671) 2px;
+  height: 100%;
+  /* background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.ruwm7hhEfO4KeERwTc-J1gHaEN%26pid%3DApi&f=1"); */
+  border-radius: 10px;
+}
+
+.mapped-flavors a {
+  text-decoration: none;
+}

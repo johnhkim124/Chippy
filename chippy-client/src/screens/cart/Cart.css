@@ -1,0 +1,19 @@
+.shopping-cart-div {
+  display: flex;
+  flex-direction: column;
+  margin: 60px;
+  text-align: center;
+  height: 100%;
+}
+
+.single-cart-div {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  margin: 0 auto;
+}
+
+.single-cart-div img {
+  width: 100%;
+  box-sizing: border-box;
+}

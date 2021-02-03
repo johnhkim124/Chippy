@@ -5,15 +5,22 @@ class CartsController < ApplicationController
 
   # GET /carts
   def index
-    @carts = @current_user.cart.snacks
-
+    # @carts = @current_user.cart.snacks
+    @carts = Cart.all
+    p "cart:#{@carts}"
     render json: @carts
   end
 
   def addToCart
     # find snack id from db
-    @snack = Snack.find(params[:snack_id])
-    @current_user.cart.snacks<<@snack
+
+    @cartitem = @current_user.cart.cart_items.find_by(snack_id: params[:snack_id])
+    if(@cartitem)
+      @cartitem.quantity = @cartitem + 1;
+    else
+      @snack = Snack.find(params[:snack_id])
+      @current_user.cart.snacks<<@snack
+    end
     render json: @current_user.cart.snacks
   end
   # GET /carts/1

@@ -1,5 +1,7 @@
 import "./Nav.css";
 import { Link } from "react-router-dom";
+import AddShoppingCartIcon from "@material-ui/icons/AddShoppingCart";
+import IconButton from "@material-ui/core/IconButton";
 
 const Nav = (props) => {
   const { currentUser, handleLogout } = props;
@@ -8,13 +10,16 @@ const Nav = (props) => {
       <div className="nav-container">
         <nav>
           <div className="brand">
-            <h1>Brand</h1>
+            <Link to="/">
+              {/* <img className="logo" src="ChippyLogo.png" alt="Chippy" /> */}
+              Chippy
+            </Link>
           </div>
 
           {currentUser ? (
             <>
               <div className="user">
-                <p>Hello, {currentUser.username}</p>
+                <p className="greeting-msg">Hello, {currentUser.username}</p>
                 <button onClick={handleLogout}>Logout</button>
                 <Link to="/new-snack">
                   <button>Create</button>
@@ -25,23 +30,28 @@ const Nav = (props) => {
             <>
               <div className="user">
                 <Link to="/login">Login</Link>
+                <br />
                 <Link to="/signup">Sign Up</Link>
+                <br />
               </div>
             </>
           )}
           {currentUser && <></>}
           <div className="links">
             <Link to="/snacks">
-              <ul>Explore</ul>
-            </Link>
-            <Link to="/countries">
-              <ul>Countries</ul>
+              <ul>Explore All Snacks</ul>
             </Link>
             <Link to="/flavors">
               <ul>Flavors</ul>
             </Link>
+          </div>
+          <div className="cart">
             <Link to="/carts">
-              <ul>Cart</ul>
+              <ul>
+                <IconButton color="primary" aria-label="add to shopping cart">
+                  <AddShoppingCartIcon />
+                </IconButton>
+              </ul>
             </Link>
           </div>
         </nav>

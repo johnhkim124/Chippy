@@ -20,6 +20,7 @@ export default function Login(props) {
 
   return (
     <form
+      className="login-form"
       onSubmit={(e) => {
         e.preventDefault();
         handleLogin(formData);
@@ -47,7 +48,10 @@ export default function Login(props) {
       </label>
       <br />
       <button>Log In</button>
-      <Link to="/signup">Sign Up</Link>
+
+      <Link to="/signup">
+        <button>Sign Up</button>
+      </Link>
     </form>
   );
 }
