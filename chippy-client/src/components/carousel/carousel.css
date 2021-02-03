@@ -16,7 +16,15 @@
 }
 
 .carousel1-img {
-  width: 300px;
+  object-fit: contain;
+}
+
+.carousel2-img {
+  object-fit: contain;
+}
+
+.carousel3-img {
+  object-fit: contain;
 }
 
 .carousel4-img {
@@ -24,5 +32,9 @@
 }
 
 .carousel5-img {
+  object-fit: contain;
+}
+
+.carousel6-img {
   object-fit: contain;
 }

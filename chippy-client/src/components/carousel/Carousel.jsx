@@ -15,24 +15,27 @@ export default class MultipleItems extends Component {
     };
     return (
       <div>
-        <h2> Multiple items </h2>
         <Slider {...settings}>
-          <div className="carousel1">
+          <div className="carousel carousel1">
             <img
               className="carousel carousel1-img"
-              src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.-ErRTzpZKQ2UiCfA9lxBWQHaHa%26pid%3DApi&f=1"
+              src="https://m.media-amazon.com/images/I/91uejKhatXL._AC_UL320_.jpg"
               alt="chips variety"
             />
           </div>
           <div className="carousel carousel2">
             <img
               className="carousel2-img"
-              src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.y6kRTv7zQdS7IwuTS0WOXwAAAA%26pid%3DApi&f=1"
+              src="https://m.media-amazon.com/images/I/816flmsx1JL._AC_UL320_.jpg"
               alt="candy variety"
             />
           </div>
           <div className="carousel carousel3">
-            <img />
+            <img
+              className="carousel3-img"
+              src="https://m.media-amazon.com/images/I/91TKOKJe2zL._AC_UL320_.jpg"
+              alt="lays variety"
+            />
           </div>
           <div className="carousel carousel4">
             <img
@@ -49,7 +52,11 @@ export default class MultipleItems extends Component {
             />
           </div>
           <div className="carousel carousel6">
-            <img />
+            <img
+              className="carousel6-img"
+              src="https://m.media-amazon.com/images/I/81wxWMZdhuL._AC_UL320_.jpg"
+              alt="kisses valentine"
+            />
           </div>
         </Slider>
       </div>
