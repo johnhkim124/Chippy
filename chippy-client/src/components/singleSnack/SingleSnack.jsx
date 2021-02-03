@@ -6,6 +6,7 @@ const SingleSnack = (props) => {
     <>
       <Link to={`/snacks/${props.id}`} className="singleSnack">
         <img src={props.imgURL} alt={props.name} className="singleSnackImg" />
+
         <div className="details-container">
           <h3 className="detail-text">{props.name}</h3>
           <h3 className="detail-text">${props.price}</h3>

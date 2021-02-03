@@ -1,7 +1,7 @@
 .singleSnack {
   display: flex;
   flex-direction: row;
-  border: solid rgb(77, 77, 77) 1px;
+  border: solid rgba(51, 51, 51, 0.308) 1px;
   display: flex;
   border-radius: 10px;
   margin-bottom: 30px;
@@ -10,6 +10,7 @@
   max-height: 200px;
   text-decoration: none;
   color: rgb(77, 77, 77);
+  box-shadow: 1px 1px 1px rgba(20, 20, 20);
 }
 
 .single-snack-div :hover {

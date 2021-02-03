@@ -6,11 +6,11 @@ import "./home.css";
 const Home = () => {
   return (
     <div>
-      {/* <Carousel /> */}
+      <Carousel />
 
       <div className="container">
         <div id="block-one" className="description">
-          <h2>Snacks from Around the Globe!</h2>
+          <h2>Snacks Around The Globe!</h2>
           <hr />
           <div className="text">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
@@ -19,7 +19,7 @@ const Home = () => {
         </div>
 
         <div id="block-two" className="description">
-          <h2>Free Shipping!</h2>
+          <h2>Free Shipping! </h2>
           <hr />
           <div className="text">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
@@ -30,7 +30,7 @@ const Home = () => {
 
       <div className="container-two">
         <div id="container-two-pic1">
-          <h1>Find you Flavor</h1>
+          <h1>Find Your Flavor</h1>
           <img
             src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi0.wp.com%2Fwww.omnomnomad.com%2Fwp-content%2Fuploads%2F2015%2F11%2FDSC_0086.jpg&f=1&nofb=1"
             alt="kit kat flavors"
