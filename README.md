@@ -1,6 +1,7 @@
 # Chippy
 
 - [Overview](#overview)
+- [Live Demo](#livedemo)
 - [MVP](#mvp)
   - [Goals](#goals)
   - [Libraries and Dependencies](#libraries-and-dependencies)
@@ -18,11 +19,16 @@
 
 <br>
 
+## Live Demo
+
+https://determined-jackson-554ec5.netlify.app/
+
+<br>
+
 ## Overview
 
-_**Chippy** is the one stop shop for all your snack cravings e-commerce web app. Browse your favorites from sweet to salty, brands to indie, and much more. 
-Chippy is a Full Stack Full CRUD web app utilizing a Restful API, Ruby on rails, and React. 
-
+\_**Chippy** is the one stop shop for all your snack cravings e-commerce web app. Browse your favorites from sweet to salty, brands to indie, and much more.
+Chippy is a Full Stack Full CRUD web app utilizing a Restful API, Ruby on rails, and React.
 
 <br>
 
@@ -49,21 +55,19 @@ association._
 
 ### Libraries and Dependencies
 
-
-|     Library      | Description                                |
-| :--------------: | :----------------------------------------- |
-|      React       | _Front-end._ |
-|   React Router   | _Routes._ |
-|      Rails       | _Back-end/DB._ |
-
+|   Library    | Description          |
+| :----------: | :------------------- |
+|    React     | _Front-end._         |
+| React Router | _Routes._            |
+|    Rails     | _Back-end/DB._       |
+| Material UI  | _Styling_            |
+| React Slick  | _Styling/Components_ |
 
 <br>
 
 ### Client (Front End)
 
 #### Wireframes
-
-
 
 ![Wire Frame](https://puu.sh/Hb8yT/e9f34a3897.png)
 
@@ -95,13 +99,9 @@ association._
 
 #### Component Tree
 
-
-
 #### Component Hierarchy
 
-
-
-``` structure
+```structure
 
 src
 |__ containers/
@@ -144,21 +144,19 @@ src
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Project Approved    |    H     |     2 hrs      |       hrs     |     TBD     |
-| Create Rails/React  |    H     |     1 hrs      |       hrs     |     TBD     |
-| User Auth           |    H     |     3 hrs      |       hrs     |     TBD     |
-| Full CRUD Back-end  |    H     |     6 hrs      |       hrs     |     TBD     |
-| Component Layout    |    H     |     2 hrs      |       hrs     |     TBD     |
-| Component List      |    H     |     3 hrs      |       hrs     |     TBD     |
-| Component Details   |    H     |     2 hrs      |       hrs     |     TBD     |
-| Component Edit      |    H     |     1 hrs      |       hrs     |     TBD     |
-| Full CRUD Front-end |    H     |     3 hrs      |       hrs     |     TBD     |
-| Styling CSS         |    H     |     5 hrs      |       hrs     |     TBD     |
-| POST MVP            |    L     |     4 hrs      |       hrs     |     TBD     |
-| Polishing           |    L     |     3  hrs     |       hrs     |     TBD     |
-| TOTAL               |          |     6 hrs      |       hrs     |     TBD     |
-
-
+| Project Approved    |    H     |     2 hrs      |     1hrs      |      1      |
+| Create Rails/React  |    H     |     1 hrs      |     1hrs      |      1      |
+| User Auth           |    H     |     3 hrs      |     4hrs      |      5      |
+| Full CRUD Back-end  |    H     |     6 hrs      |     7hrs      |      8      |
+| Component Layout    |    H     |     2 hrs      |     3hrs      |      4      |
+| Component List      |    H     |     3 hrs      |     3hrs      |      5      |
+| Component Details   |    H     |     2 hrs      |     3hrs      |      5      |
+| Component Edit      |    H     |     1 hrs      |     1hrs      |      2      |
+| Full CRUD Front-end |    H     |     3 hrs      |     5hrs      |      6      |
+| Styling CSS         |    H     |     5 hrs      |     6hrs      |      6      |
+| POST MVP            |    L     |     4 hrs      |     4hrs      |      4      |
+| Polishing           |    L     |     3 hrs      |     3hrs      |      3      |
+| TOTAL               |          |     6 hrs      |     41hrs     |     50      |
 
 <br>
 
@@ -170,19 +168,56 @@ src
 
 <br>
 
-***
+---
 
 ## Post-MVP
-- _User Reviews
+
+- \_User Reviews
 - _User Favorites_
 - _Polished Sleek Design_
 - _Shopping Cart_
 - _Checkout Functional_
 
-***
+---
 
 ## Code Showcase
 
+```
+const Cart = (props) => {
+  const [cartSnacks, setCartSnacks] = useState([]);
 
+  useEffect(() => {
+    const fetchCart = async () => {
+      const cartData = await getCart();
+      setCartSnacks(cartData);
+    };
+    fetchCart();
+  }, [props.currentUser]);
+
+  const mappedCartSnacks = cartSnacks.map((snack, index) => {
+    return (
+      <div className="single-cart-div">
+        <SingleSnack
+          id={snack.id}
+          imgURL={snack.img_url}
+          name={snack.name}
+          price={snack.price}
+          origin={snack.origin}
+          key={index}
+        />
+      </div>
+    );
+  });
+
+  return (
+    <div className="shopping-cart-div">
+      <h1>Shopping Cart</h1>
+      <div className="cart-div">{mappedCartSnacks}</div>
+    </div>
+  );
+};
+```
 
 ## Code Issues & Resolutions
+
+- Had alot of troubles with cart feature.
