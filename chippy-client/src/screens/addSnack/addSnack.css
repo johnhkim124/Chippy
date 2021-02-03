@@ -1,0 +1,23 @@
+.create-snack-form {
+  display: flex;
+  justify-content: left;
+  border: 1px solid black;
+  width: 500px;
+  height: 600px;
+  padding: 20px;
+}
+
+.create-snack-form input {
+  width: 100%;
+  padding: 5px 16px;
+  margin: 5px 0;
+  box-sizing: border-box;
+}
+
+.create-snack-title {
+  padding-top: 2px;
+}
+
+.create-snack-form button {
+  background-color: ;
+}

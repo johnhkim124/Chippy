@@ -1,6 +1,6 @@
 import SingleSnack from "../../components/singleSnack/SingleSnack";
 import { useEffect, useState } from "react";
-import { getAllFlavors, getFlavor } from "../../sevices/flavors";
+import { getFlavor } from "../../sevices/flavors";
 import { useParams } from "react-router-dom";
 
 export default function Snacks(props) {
