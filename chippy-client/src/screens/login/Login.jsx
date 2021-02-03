@@ -20,6 +20,7 @@ export default function Login(props) {
 
   return (
     <form
+      className="login-form"
       onSubmit={(e) => {
         e.preventDefault();
         handleLogin(formData);
