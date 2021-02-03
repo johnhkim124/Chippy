@@ -6,6 +6,9 @@ nav {
 
 nav a {
   text-decoration: none;
+  font-size: 20px;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.986);
 }
 
 nav button {
@@ -27,4 +30,10 @@ nav button {
 
 .cart {
   grid-area: C;
+}
+
+.greeting-msg {
+  font-size: 16px;
+  font-weight: 800;
+  color: white;
 }

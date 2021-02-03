@@ -18,7 +18,7 @@ const Nav = (props) => {
           {currentUser ? (
             <>
               <div className="user">
-                <p>Hello, {currentUser.username}</p>
+                <p className="greeting-msg">Hello, {currentUser.username}</p>
                 <button onClick={handleLogout}>Logout</button>
                 <Link to="/new-snack">
                   <button>Create</button>
@@ -38,7 +38,7 @@ const Nav = (props) => {
           {currentUser && <></>}
           <div className="links">
             <Link to="/snacks">
-              <ul>Explore</ul>
+              <ul>Explore All Snacks</ul>
             </Link>
             <Link to="/flavors">
               <ul>Flavors</ul>
