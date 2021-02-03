@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { Switch, useHistory, Route, Redirect } from "react-router-dom";
-import { getAllSnacks, postSnack, getSnack } from "../sevices/snacks";
+import { Switch, useHistory, Route } from "react-router-dom";
+import { getAllSnacks, postSnack } from "../sevices/snacks";
 import Home from "../screens/home/Home";
 import Snacks from "../screens/snacks/Snacks";
 import AddSnack from "../screens/addSnack/AddSnack";
@@ -10,7 +10,7 @@ import EditItem from "../screens/editItem/EditItem";
 import Cart from "../screens/cart/Cart";
 import FlavorSnacks from "../components/flavorSnacks/FlavorSnacks";
 import { getAllFlavors } from "../sevices/flavors";
-import { getCart, addToCart } from "../sevices/cart";
+import { addToCart } from "../sevices/cart";
 
 export default function MainContainer(props) {
   const [snacks, setSnacks] = useState([]);
