@@ -11,7 +11,8 @@ const Nav = (props) => {
         <nav>
           <div className="brand">
             <Link to="/">
-              <img className="logo" src="ChippyLogo.png" alt="Chippy" />
+              {/* <img className="logo" src="ChippyLogo.png" alt="Chippy" /> */}
+              Chippy
             </Link>
           </div>
 

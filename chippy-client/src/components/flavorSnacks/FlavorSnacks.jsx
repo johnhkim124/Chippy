@@ -2,6 +2,7 @@ import SingleSnack from "../../components/singleSnack/SingleSnack";
 import { useEffect, useState } from "react";
 import { getFlavor } from "../../sevices/flavors";
 import { useParams } from "react-router-dom";
+import "./flavorsnacks.css";
 
 export default function Snacks(props) {
   const [flavorSnacks, setflavorSnacks] = useState(null);
@@ -34,10 +35,10 @@ export default function Snacks(props) {
 
   return (
     flavorSnacks && (
-      <>
+      <div className="flavor-snacks-div">
         <h1>{flavorSnacks.name}</h1>
         <div className="snacks-div">{mappedFlavorSnacks}</div>
-      </>
+      </div>
     )
   );
 }

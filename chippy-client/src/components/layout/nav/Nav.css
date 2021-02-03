@@ -2,6 +2,7 @@ nav {
   background-color: rgba(255, 42, 42, 0.986);
   display: grid;
   grid-template-areas: "L B s s U C";
+  align-items: center;
 }
 
 nav a {
