@@ -35,7 +35,7 @@ const SnackDetail = (props) => {
           <div className="snack-info">
             <h1>{snack.name}</h1>
             <p>Category: {snack.category}</p>
-            <p>{snack.origin}</p>
+            <p>Region: {snack.origin}</p>
             <h3>Prices: ${snack.price}</h3>
 
             <button
