@@ -29,6 +29,12 @@ puts "#{User.count} users created"
 @sourpatch = Snack.create!(name: "Sour Patch Kids", user:@admin, brand: "Sour Patch Kids", category:"sour candy", origin: "U.S.", price: 3, img_url: "https://m.media-amazon.com/images/I/81SFEy-bzlL._AC_UL320_.jpg")
 @snakyard = Snack.create!(name: "Shitake Mushrooms", user:@admin, brand: "Snak Yard", category: "mushroom snack", origin: "U.S.", price: 5, img_url:"https://m.media-amazon.com/images/I/71J4R-GSiKL._AC_UL320_.jpg")
 @lindt = Snack.create!(name: "Lindt Dark Chocolate", user:@admin, brand: "Lindt", category:"dark chocolate", origin:"Switzerland", price: 4, img_url:"https://m.media-amazon.com/images/I/71vVSDRa-ZL._AC_UL320_.jpg")
+@edamame = Snack.create!(name: "Edamame Beans", user:@admin, brand: "The Only Bean", category:"nuts", origin:"U.S.", price: 4, img_url:"https://m.media-amazon.com/images/I/71YQL8bAIPL._AC_UL320_.jpg")
+@oreos = Snack.create!(name: "Oreos", user:@admin, brand: "Oreos", category:"cookie", origin:"U.S.", price: 3, img_url:"https://m.media-amazon.com/images/I/81cIZ8VCzML._AC_UL320_.jpg")
+@biscolata = Snack.create!(name: "Biscolata Lemon Cookies", user:@admin, brand: "Biscolata", category:"cookie", origin:"U.S.", price: 5, img_url:"https://m.media-amazon.com/images/I/61KBAXlOO3L._AC_UL320_.jpg")
+@pocky = Snack.create!(name: "Pocky Strawberry", user:@admin, brand: "Pocky", category:"cookie", origin:"Japan", price: 3, img_url:"https://m.media-amazon.com/images/I/81Z0eLtu3AL._AC_UL320_.jpg")
+
+
 
 
 puts "#{Snack.count} snacks created"
@@ -49,9 +55,13 @@ puts "#{Flavor.count} flavors created"
 @skittles.flavors.push(@sweet)
 @kitKatSweetPotato.flavors.push(@sweet)
 @Orion.flavors.push(@sweet, @salty)
-@sourpatch.flavors.push(@sweet, @sour)
+@sourpatch.flavors.push(@sweet, @sour, @bitter)
 @snakyard.flavors.push(@salty, @umami)
 @lindt.flavors.push(@sweet, @bitter)
+@edamame.flavors.push(@salty, @umami)
+@oreos.flavors.push(@sweet)
+@biscolata.flavors.push(@sweet, @sour, @bitter)
+@pocky.flavors.push(@sweet)
 
 @cartTest = Cart.create!(user_id: @admin.id)
 puts "#{Cart.count} carts created"
